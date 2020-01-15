@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vue js Dersleri</title>
+  <link rel="stylesheet" type="text/css" href="app.css" />
+</head>
+<body>
+  <div id="app">
+     <p v-if="isLoading"> 
+       <img src="./img/loadanim.gif">
+     </p>
+     <!-- <div class="subtotal">
+      Subtotal ({{cart.length}}) : <span class="price"> $ {{cartTotal}}</span>
+    </div> -->
+    <vue-cart :cart=cart title="Shopping Kart"  type="shoppingCart"> </vue-cart>
+    <hr>
+    <vue-cart :cart=saved title ="Save For Later" type="savedCart"> </vue-cart>
+    <!-- <h2>Kayıtlı Olanlar ({{saved.length}}) </h2>
+    <p v-if="!saved.length">Kayıt bulunamadı.</p>
+    <div class="cart">
+     <div class="item" v-for="(item, index) in saved">
+      <div class="image">
+        <a v-bind:href="item.url">
+          <hr>
+          <img  v-bind:src="item.image" />
+        </a>
+      </div>
+      <div class="info">
+       <h4>{{item.name}}</h4>
+        <p class="seller">by {{item.seller}}</p>
+        <p class="status available" v-if="item.isAvailable">In Stock</p>
+        <p class="shipping" v-if="item.isEligible">Eligible for FREE Shipping & FREE Returns</p>
+        <a href="#" v-on:click="removeFromSaveforLater(index)">Delete</a>
+        <a href="#" class="secondary" v-on:click="moveToCart(index)">Move to cart</a>
+      </div>
+     </div>
+   </div> -->
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<script type="text/javascript" src="./app.js"> </script>
+</html>
